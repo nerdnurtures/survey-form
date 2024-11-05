@@ -1,0 +1,291 @@
+Based on the key points you’ve provided, I will frame detailed, professional, and easily understandable survey questions in the form of MCQs for each of the three categories: **students**, **parents**, and **teachers**.
+
+### **1. Student Survey Questions:**
+
+#### Personal Information:
+- Name
+- Gender
+- Age
+- City
+- Current Education Level
+- Institute Name
+
+#### Survey Questions:
+
+1. **How do you perceive the idea of being educated?**
+   - A way to gain knowledge and academic skills
+   - A tool to secure a good job
+   - A holistic approach to developing personal, social, and professional skills
+   - A system to shape one's character and values
+
+2. **How important do you think education outside of academics (like life skills, social values, etc.) is?**
+   - Very important
+   - Important but secondary to academics
+   - Only academics are important
+   - Not sure
+
+3. **What skills do you think are necessary to live a full, productive life?**
+   - Time management
+   - Financial management
+   - Building and maintaining relationships
+   - Physical and mental health care
+   - Emotional intelligence
+   - Social and cultural values
+   *(Select all that apply)*
+
+4. **How well does your current education prepare you for real-life challenges?**
+   - Very well
+   - Somewhat well
+   - Not well
+   - Not at all
+
+5. **Do you believe that education about life skills and values is as important as academic education?**
+   - Equally important
+   - More important
+   - Less important
+   - Mandatory
+
+6. **Is there any space or center where you are being taught about these non-academic ideas?**
+   - Yes, at school
+   - Yes, at additional learning centers
+   - Yes, at home
+   - No
+
+7. **Do you think education about these aspects (life skills, social values, etc.) should be done at home only?**
+   - Yes
+   - No, it should be a part of formal education
+   - Both at home and in schools
+   - Not sure
+
+8. **What steps have you taken to get involved in learning these non-academic skills?**
+   - Consuming online content (YouTube, blogs, etc.)
+   - Attending events, seminars, or talk shows
+   - Engaging on social media platforms
+   - Discussing with peers, parents, and teachers
+   - Participating in online programs or courses
+   - Joining communities
+   - Seeking personal mentorship
+   *(Select all that apply)*
+
+9. **Did these activities seem helpful to you?**
+   - Very helpful
+   - Somewhat helpful
+   - Not helpful
+   - Haven’t tried
+
+10. **Do you believe being educated and skilled in these areas is important for building a better future and a fulfilled life?**
+    - Yes
+    - No
+    - Maybe
+
+---
+
+### **2. Parent Survey Questions:**
+
+#### Personal Information:
+- Name
+- Gender
+- Age
+- City
+- Education Background
+- Profession
+
+#### Survey Questions:
+
+1. **How do you perceive the idea of being educated?**
+   - To gain academic knowledge
+   - To prepare for a professional career
+   - To develop life skills and social values
+   - To nurture an overall personality
+
+2. **How important do you think non-academic education (life skills, social values, etc.) is for your child?**
+   - Very important
+   - Important but secondary to academics
+   - Only academics are important
+   - Not sure
+
+3. **What do you think are the essential skills for a child to live a full and productive life?**
+   - Time management
+   - Financial management
+   - Healthy relationships
+   - Physical and emotional health
+   - Social and cultural values
+   *(Select all that apply)*
+
+4. **Do you teach your child these life skills and values at home?**
+   - Yes, regularly
+   - Yes, occasionally
+   - No, I rely on school for that
+   - Not sure how to teach them
+
+5. **Do you believe that today’s generation lacks the values that were more prevalent during your time due to lifestyle and generational changes?**
+   - Yes, strongly agree
+   - Somewhat agree
+   - No, disagree
+   - Not sure
+
+6. **Do you feel there should be formal education or guidance on these aspects for children?**
+   - Yes, definitely
+   - No, it should be taught at home
+   - Maybe, but not in formal education
+   - Not sure
+
+7. **What areas do you think your child is lacking in and should be educated about?**
+   - Emotional management
+   - Time management
+   - Financial management
+   - Social and cultural values
+   - Health and well-being
+   *(Select all that apply)*
+
+8. **Which domains do you think should be a priority in non-academic education?**
+   - Social and cultural values
+   - Emotional intelligence
+   - Health and fitness
+   - Time and money management
+   *(Select all that apply)*
+
+9. **How successful do you think schools are in developing a child’s personality beyond academics?**
+   - Very successful
+   - Somewhat successful
+   - Not very successful
+   - Not successful at all
+
+10. **How do you support your child’s personal development outside of school?**
+    - Enrolling them in extracurricular activities
+    - Spending time discussing life values at home
+    - Using online programs or courses
+    - Seeking external mentorship
+    *(Select all that apply)*
+
+11. **Which of the following methods would be the most effective in teaching life skills and values?**
+    - Social media platforms
+    - Online programs/courses
+    - Personal mentorship
+    - Events and seminars
+    *(Select one)*
+
+---
+
+### **3. Teacher Survey Questions:**
+
+#### Personal Information:
+- Name
+- Gender
+- Age
+- City
+- Education Background
+- Institute
+- Subject Domain
+- Experience (Years)
+- Designation
+
+#### Survey Questions:
+
+1. **Do you feel that there are any limitations in the current formal education system’s teaching methods?**
+   - Yes, there are many limitations
+   - Some limitations, but manageable
+   - No, the current methods are effective
+   - Not sure
+
+2. **Do you think students need education beyond academics (life skills, emotional intelligence, etc.)?**
+   - Yes, definitely
+   - No, academics are enough
+   - Maybe, depending on the student
+   - Not sure
+
+3. **What topics do you think should be included beyond academics?**
+   - Time and money management
+   - Health and emotional intelligence
+   - Social and cultural values
+   - Relationship building
+   *(Select all that apply)*
+
+4. **How often do you encounter students who are interested in learning beyond academics?**
+   - Very often
+   - Occasionally
+   - Rarely
+   - Never
+
+5. **What do you think are the main reasons students don’t receive holistic development in their education?**
+   - Lack of time in the curriculum
+   - Lack of awareness about its importance
+   - Not enough focus from schools
+   - Lack of resources or tools
+   *(Select all that apply)*
+
+6. **Which teaching methods do you think are most engaging for students?**
+   - Interactive discussions
+   - Group activities and projects
+   - Use of multimedia (videos, presentations)
+   - Personal mentorship or guidance
+   *(Select all that apply)*
+
+---
+
+### **Summary:**
+This set of MCQ-based questions is designed to explore each demographic’s perspectives on education beyond academics, touching on life skills, social values, and personal development. The structure ensures the survey is detailed, professional, and easy to understand, encouraging meaningful responses.
+
+Let me know if you need further modifications or additional questions!
+
+
+
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .category-section {
+            display: none;
+        }
+
+        .category-section.active {
+            display: block;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>

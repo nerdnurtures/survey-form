@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #eaf2f8;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+        color: #333;
+    }
+    
+    .container {
+        width: 70%;
+        margin: 40px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease;
+    }
+    
+    .container:hover {
+        transform: scale(1.02);
+    }
+    
+    h1, h2 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+        font-size: 16px;
+    }
+    
+    input[type="text"], input[type="number"], select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        margin-bottom: 20px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+    
+    input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    .category-section {
+        display: none;
+    }
+    
+    .category-section.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 6px;
+        transition: background-color 0.3s, transform 0.2s;
+        display: inline-block;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+    
+    button:active {
+        background-color: #003f7f;
+        transform: translateY(1px);
+    }
+    
+    button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+    
+    input[type="checkbox"], input[type="radio"] {
+        margin-right: 10px;
+        transform: scale(1.3);
+    }
+    
+    input[type="checkbox"]:checked, input[type="radio"]:checked {
+        background-color: #007bff;
+    }
+    
+    .form-footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #666;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Survey Form</h1>
+    <p>Select your category to start the survey:</p>
+
+    <label for="category">I am a:</label>
+    <select id="category">
+        <option value="">--Select--</option>
+        <option value="student">Student</option>
+        <option value="parent">Parent</option>
+        <option value="teacher">Teacher</option>
+    </select>
+
+    <!-- Student Section -->
+    <div id="student-section" class="category-section">
+        <h2>Student Survey</h2>
+        <form id="student-form" action="/submit-survey" method="POST">
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" name="name" required>
+
+            <label for="student-gender">Gender:</label>
+            <select id="student-gender" name="gender" required>
+                <option value="">--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="student-age">Age:</label>
+            <input type="number" id="student-age" name="age" required>
+
+            <label for="student-city">City:</label>
+            <input type="text" id="student-city" name="city" required>
+
+            <label for="student-education">Current Education Level:</label>
+            <input type="text" id="student-education" name="currentEducation" required>
+
+            <label for="student-institute">Institute:</label>
+            <input type="text" id="student-institute" name="institute" required>
+
+            <label>How do you perceive the idea of being educated?</label>
+            <select name="educationPerception" required>
+                <option value="knowledge">A way to gain knowledge and academic skills</option>
+                <option value="job">A tool to secure a good job</option>
+                <option value="holistic">A holistic approach to developing personal, social, and professional skills</option>
+                <option value="character">A system to shape one's character and values</option>
+            </select>
+
+            <label>POV about education aspects other than academics?</label>
+            <select name="otherEducationAspects" required>
+                <option value="important">Important but overlooked</option>
+                <option value="equallyImportant">Equally important as academics</option>
+                <option value="lessImportant">Less important than academics</option>
+            </select>
+
+            <label>What skills do you think are required to live a full potential and productive life?</label>
+            <select name="requiredSkills" required>
+                <option value="timeManagement">Time Management</option>
+                <option value="financialLiteracy">Financial Literacy</option>
+                <option value="relationships">Building Relationships</option>
+                <option value="health">Health and Well-being</option>
+                <option value="emotions">Emotional Intelligence</option>
+                <option value="socialValues">Social Values</option>
+                <option value="culturalBeliefs">Cultural Beliefs</option>
+            </select>
+
+            <label>How well do you think your current education prepares you for real-life challenges?</label>
+            <select name="preparesForLife" required>
+                <option value="veryWell">Very well</option>
+                <option value="somewhat">Somewhat</option>
+                <option value="notWell">Not well</option>
+            </select>
+
+            <label>Do you feel education about these aspects is as important as academics?</label>
+            <select name="importanceOfHolisticEducation" required>
+                <option value="equally">Equally important</option>
+                <option value="more">More important</option>
+                <option value="less">Less important</option>
+                <option value="mandatory">Mandatory</option>
+            </select>
+            
+            <label for="q6">6. Is there any space or center where you are being taught about these non-academic ideas?</label>
+            <label><input type="radio" name="q6" value="school" required> Yes, at school</label><br>
+            <label><input type="radio" name="q6" value="learning-centers" required> Yes, at additional learning centers</label><br>
+            <label><input type="radio" name="q6" value="home" required> Yes, at home</label><br>
+            <label><input type="radio" name="q6" value="none" required> No</label>
+
+            <label for="q7">7. Do you think education about these aspects (life skills, social values, etc.) should be done at home only?</label>
+            <label><input type="radio" name="q7" value="yes-home-only" required> Yes</label><br>
+            <label><input type="radio" name="q7" value="part-of-formal" required> No, it should be a part of formal education</label><br>
+            <label><input type="radio" name="q7" value="both" required> Both at home and in schools</label><br>
+            <label><input type="radio" name="q7" value="not-sure" required> Not sure</label>
+
+            <label for="q8">8. What steps have you taken to get involved in learning these non-academic skills?</label>
+            <label><input type="checkbox" name="q8[]" value="online-content"> Consuming online content (YouTube, blogs, etc.)</label><br>
+            <label><input type="checkbox" name="q8[]" value="events-seminars"> Attending events, seminars, or talk shows</label><br>
+            <label><input type="checkbox" name="q8[]" value="social-media"> Engaging on social media platforms</label><br>
+            <label><input type="checkbox" name="q8[]" value="discussions"> Discussing with peers, parents, and teachers</label><br>
+            <label><input type="checkbox" name="q8[]" value="online-courses"> Participating in online programs or courses</label><br>
+            <label><input type="checkbox" name="q8[]" value="communities"> Joining communities</label><br>
+            <label><input type="checkbox" name="q8[]" value="mentorship"> Seeking personal mentorship</label>
+
+            <label for="q9">9. Did these activities seem helpful to you?</label>
+            <label><input type="radio" name="q9" value="very-helpful" required> Very helpful</label><br>
+            <label><input type="radio" name="q9" value="somewhat-helpful" required> Somewhat helpful</label><br>
+            <label><input type="radio" name="q9" value="not-helpful" required> Not helpful</label><br>
+            <label><input type="radio" name="q9" value="haven't-tried" required> Haven’t tried</label>
+
+            <label for="q10">10. Do you believe being educated and skilled in these areas is important for building a better future and a fulfilled life?</label>
+            <label><input type="radio" name="q10" value="yes" required> Yes</label><br>
+            <label><input type="radio" name="q10" value="no" required> No</label><br>
+            <label><input type="radio" name="q10" value="maybe" required> Maybe</label>
+
+            <!-- Continue with other questions for students -->
+
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+
+    <!-- Parent Section -->
+    <div id="parent-section" class="category-section">
+        <h2>Parent Survey</h2>
+        <form id="parent-form" action="/submit-survey" method="POST">
+            <label for="parent-name">Name:</label>
+            <input type="text" id="parent-name" name="name" required>
+
+            <label for="parent-gender">Gender:</label>
+            <select id="parent-gender" name="gender" required>
+                <option value="">--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="parent-age">Age:</label>
+            <input type="number" id="parent-age" name="age" required>
+
+            <label for="parent-city">City:</label>
+            <input type="text" id="parent-city" name="city" required>
+
+            <label for="parent-education">Education Background:</label>
+            <input type="text" id="parent-education" name="educationBackground" required>
+
+            <label for="parent-profession">Profession:</label>
+            <input type="text" id="parent-profession" name="profession" required>
+
+            <label>How do you perceive the idea of being educated?</label>
+            <select name="educationPerception" required>
+                <option value="knowledge">A way to gain knowledge and academic skills</option>
+                <option value="job">A tool to secure a good job</option>
+                <option value="holistic">A holistic approach to developing personal, social, and professional skills</option>
+                <option value="character">A system to shape one's character and values</option>
+            </select>
+             
+            <label>2. How important do you think non-academic education (life skills, social values, etc.) is for your child?</label>
+            <label><input type="radio" name="q2" value="very-important" required> Very important</label><br>
+            <label><input type="radio" name="q2" value="secondary" required> Important but secondary to academics</label><br>
+            <label><input type="radio" name="q2" value="only-academics" required> Only academics are important</label><br>
+            <label><input type="radio" name="q2" value="not-sure" required> Not sure</label>
+            
+            <label>3. What do you think are the essential skills for a child to live a full and productive life?</label>
+            <label><input type="checkbox" name="q3[]" value="time-management"> Time management</label><br>
+            <label><input type="checkbox" name="q3[]" value="financial-management"> Financial management</label><br>
+            <label><input type="checkbox" name="q3[]" value="healthy-relationships"> Healthy relationships</label><br>
+            <label><input type="checkbox" name="q3[]" value="physical-emotional-health"> Physical and emotional health</label><br>
+            <label><input type="checkbox" name="q3[]" value="social-cultural-values"> Social and cultural values</label>
+
+            <label>4. Do you teach your child these life skills and values at home?</label>
+            <label><input type="radio" name="q4" value="yes-regularly" required> Yes, regularly</label><br>
+            <label><input type="radio" name="q4" value="yes-occasionally" required> Yes, occasionally</label><br>
+            <label><input type="radio" name="q4" value="no-rely-on-school" required> No, I rely on school for that</label><br>
+            <label><input type="radio" name="q4" value="not-sure" required> Not sure how to teach them</label>
+
+            <label>5. Do you believe that today’s generation lacks the values that were more prevalent during your time due to lifestyle and generational changes?</label>
+            <label><input type="radio" name="q5" value="strongly-agree" required> Yes, strongly agree</label><br>
+                <label><input type="radio" name="q5" value="somewhat-agree" required> Somewhat agree</label><br>
+                <label><input type="radio" name="q5" value="disagree" required> No, disagree</label><br>
+                <label><input type="radio" name="q5" value="not-sure" required> Not sure</label>
+
+                <label>6. Do you feel there should be formal education or guidance on these aspects for children?</label>
+                <label><input type="radio" name="q6" value="definitely" required> Yes, definitely</label><br>
+                <label><input type="radio" name="q6" value="taught-at-home" required> No, it should be taught at home</label><br>
+                <label><input type="radio" name="q6" value="maybe-not-formal" required> Maybe, but not in formal education</label><br>
+                <label><input type="radio" name="q6" value="not-sure" required> Not sure</label>
+
+                <label>7. What areas do you think your child is lacking in and should be educated about?</label>
+                <label><input type="checkbox" name="q7[]" value="emotional-management"> Emotional management</label><br>
+                <label><input type="checkbox" name="q7[]" value="time-management"> Time management</label><br>
+                <label><input type="checkbox" name="q7[]" value="financial-management"> Financial management</label><br>
+                <label><input type="checkbox" name="q7[]" value="social-cultural-values"> Social and cultural values</label><br>
+                <label><input type="checkbox" name="q7[]" value="health-well-being"> Health and well-being</label>
+
+                <label>8. Which domains do you think should be a priority in non-academic education?</label>
+                <label><input type="checkbox" name="q8[]" value="social-cultural-values"> Social and cultural values</label><br>
+                <label><input type="checkbox" name="q8[]" value="emotional-intelligence"> Emotional intelligence</label><br>
+                <label><input type="checkbox" name="q8[]" value="health-fitness"> Health and fitness</label><br>
+                <label><input type="checkbox" name="q8[]" value="time-money-management"> Time and money management</label>
+
+                <label>9. How successful do you think schools are in developing a child’s personality beyond academics?</label>
+                <label><input type="radio" name="q9" value="very-successful" required> Very successful</label><br>
+                <label><input type="radio" name="q9" value="somewhat-successful" required> Somewhat successful</label><br>
+                <label><input type="radio" name="q9" value="not-successful" required> Not very successful</label><br>
+                <label><input type="radio" name="q9" value="not-successful-at-all" required> Not successful at all</label>
+
+                <label>10. How do you support your child’s personal development outside of school?</label>
+                <label><input type="checkbox" name="q10[]" value="extracurricular-activities"> Enrolling them in extracurricular activities</label><br>
+                <label><input type="checkbox" name="q10[]" value="discussing-values"> Spending time discussing life values at home</label><br>
+                <label><input type="checkbox" name="q10[]" value="online-programs"> Using online programs or courses</label><br>
+                <label><input type="checkbox" name="q10[]" value="external-mentorship"> Seeking external mentorship</label>
+
+                <label>11. Which of the following methods would be the most effective in teaching life skills and values?</label>
+                <label><input type="radio" name="q11" value="social-media" required> Social media platforms</label><br>
+                <label><input type="radio" name="q11" value="online-courses" required> Online programs/courses</label><br>
+                <label><input type="radio" name="q11" value="personal-mentorship" required> Personal mentorship</label><br>
+                <label><input type="radio" name="q11" value="events-seminars" required> Events and seminars</label>
+
+
+            <!-- Continue with other questions for parents -->
+
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+
+    <!-- Teacher Section -->
+    <div id="teacher-section" class="category-section">
+        <h2>Teacher Survey</h2>
+        <form id="teacher-form" action="/submit-survey" method="POST">
+            <label for="teacher-name">Name:</label>
+            <input type="text" id="teacher-name" name="name" required>
+
+            <label for="teacher-gender">Gender:</label>
+            <select id="teacher-gender" name="gender" required>
+                <option value="">--Select--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="teacher-age">Age:</label>
+            <input type="number" id="teacher-age" name="age" required>
+
+            <label for="teacher-city">City:</label>
+            <input type="text" id="teacher-city" name="city" required>
+
+            <label for="teacher-education">Education Background:</label>
+            <input type="text" id="teacher-education" name="educationBackground" required>
+
+            <label for="teacher-experience">Years of Experience:</label>
+            <input type="number" id="teacher-experience" name="experience" required>
+
+            <label>Did you feel any kind of limitations in the formal education system?</label>
+            <div class="options">
+                <label><input type="radio" name="q1" value="many-limitations" required> Yes, there are many limitations</label><br>
+                <label><input type="radio" name="q1" value="manageable-limitations" required> Some limitations, but manageable</label><br>
+                <label><input type="radio" name="q1" value="effective-methods" required> No, the current methods are effective</label><br>
+                <label><input type="radio" name="q1" value="not-sure" required> Not sure</label>
+            </div>
+
+            <label>2. Do you think students need education beyond academics (life skills, emotional intelligence, etc.)?</label>
+            <div class="options">
+                <label><input type="radio" name="q2" value="definitely" required> Yes, definitely</label><br>
+                <label><input type="radio" name="q2" value="academics-enough" required> No, academics are enough</label><br>
+                <label><input type="radio" name="q2" value="depends-student" required> Maybe, depending on the student</label><br>
+                <label><input type="radio" name="q2" value="not-sure" required> Not sure</label>
+            </div>
+
+            <label>3. What topics do you think should be included beyond academics?</label>
+            <div class="options">
+                <label><input type="checkbox" name="q3[]" value="time-money-management"> Time and money management</label><br>
+                <label><input type="checkbox" name="q3[]" value="health-emotional-intelligence"> Health and emotional intelligence</label><br>
+                <label><input type="checkbox" name="q3[]" value="social-cultural-values"> Social and cultural values</label><br>
+                <label><input type="checkbox" name="q3[]" value="relationship-building"> Relationship building</label>
+            </div>
+
+            <label>4. How often do you encounter students who are interested in learning beyond academics?</label>
+            <div class="options">
+                <label><input type="radio" name="q4" value="very-often" required> Very often</label><br>
+                <label><input type="radio" name="q4" value="occasionally" required> Occasionally</label><br>
+                <label><input type="radio" name="q4" value="rarely" required> Rarely</label><br>
+                <label><input type="radio" name="q4" value="never" required> Never</label>
+            </div>
+
+            <label>5. What do you think are the main reasons students don’t receive holistic development in their education?</label>
+            <div class="options">
+                <label><input type="checkbox" name="q5[]" value="lack-of-time"> Lack of time in the curriculum</label><br>
+                <label><input type="checkbox" name="q5[]" value="lack-of-awareness"> Lack of awareness about its importance</label><br>
+                <label><input type="checkbox" name="q5[]" value="lack-of-focus"> Not enough focus from schools</label><br>
+                <label><input type="checkbox" name="q5[]" value="lack-of-resources"> Lack of resources or tools</label>
+            </div>
+
+            <label>6. Which teaching methods do you think are most engaging for students?</label>
+            <div class="options">
+                <label><input type="checkbox" name="q6[]" value="interactive-discussions"> Interactive discussions</label><br>
+                <label><input type="checkbox" name="q6[]" value="group-activities"> Group activities and projects</label><br>
+                <label><input type="checkbox" name="q6[]" value="multimedia"> Use of multimedia (videos, presentations)</label><br>
+                <label><input type="checkbox" name="q6[]" value="personal-mentorship"> Personal mentorship or guidance</label>
+            </div>
+
+
+            <!-- Continue with other questions for teachers -->
+
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const categorySelect = document.getElementById('category');
+    const studentSection = document.getElementById('student-section');
+    const parentSection = document.getElementById('parent-section');
+    const teacherSection = document.getElementById('teacher-section');
+
+    categorySelect.addEventListener('change', function() {
+        studentSection.classList.remove('active');
+        parentSection.classList.remove('active');
+        teacherSection.classList.remove('active');
+
+        if (this.value === 'student') {
+            studentSection.classList.add('active');
+        } else if (this.value === 'parent') {
+            parentSection.classList.add('active');
+        } else if (this.value === 'teacher') {
+            teacherSection.classList.add('active');
+        }
+    });
+</script>
+
+</body>
+</html>
